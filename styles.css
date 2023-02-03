@@ -1,0 +1,231 @@
+html, body{
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-family: 'Mulish', sans-serif;
+}
+
+h1{
+  font-size: 3.2vh;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+select{
+  display: block;
+  font-size: 1.5vh;
+  font-family: 'Mulish', sans-serif;
+  margin-bottom: 5px;
+  height: 6vh;
+  width: 35%;
+  padding-left: 6px;
+  border: 2px solid #D5D3DE;
+  border-radius: 2px;
+}
+
+input[type=checkbox]{
+  accent-color: #8D76F6;
+  margin-right: 5px;
+}
+
+u, select:hover, button:hover, input[type=checkbox]:hover, .content__checkbox-label:hover{
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #333333;
+}
+
+u:hover{
+  color: #8D76F6;
+}
+
+.container{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.left{
+  background-image: url("assets/MediaPlaceholder.png");
+  background-size: cover;
+} 
+
+.right{
+  align-items: center;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-tracks: center;
+  width: 60%;
+  height: 80vh;
+}
+
+.form__alreadymember--top{
+  font-size: 1.4vh;
+}
+
+.form__alreadymember--bottom{
+  font-size: 1.4vh;
+  margin-bottom: 0px;
+}
+
+.form__label{
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 2vh;
+}
+
+.form__signup-btn{
+  font-size: 2vh;
+  width: 100%;
+  height: 6vh;
+  border: .5px;
+  border-radius: 2px;
+  margin: 0px 0px -3px 0px;
+  color: white;
+  background-color: #3D3C3C;
+}
+
+.form__inputField{
+  font-size: 2vh;
+  display: block;
+  border: 2px solid #D5D3DE;
+  border-radius: 2px;
+  outline: none;
+  text-indent: 10px;
+  height: 6vh;
+  padding: 0px;
+  width: 99%;
+}
+
+.form__inputField:focus{
+  border-color: #8D76F6;
+}
+
+.form__checkbox-label{
+  margin: 0px;
+  font-size: 1.6vh;
+  display:flex;
+  width: 100%;
+}
+
+.form__checkbox-label input{
+  margin-right: 10px;
+}
+
+.form__wrapper{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.form__icon-btn{
+  border: none;
+  background-color: transparent;
+  float: right;
+  position: relative;
+  bottom: 4.4vh;
+  right: .8vw;
+}
+
+.form__icon-btn:hover{
+  background-color: transparent;
+}
+
+.icon{
+  background-image: url(assets/svgs/icons/eye-off_gray.svg);
+  background-repeat: no-repeat;
+  background-size:contain;
+  height: 2.13vh;
+  width: 2.13vh;
+  float: right;
+}
+
+/* -- Icon for password inputs hidden state -- */
+.icon__closedeye{
+  background-image: url(assets/svgs/icons/eye-off_gray.svg);
+}
+
+/* -- Icon for password inputs visible state -- */
+.icon__openeye{
+  background-image: url(assets/svgs/icons/eye_black.svg);
+}
+
+/* -- Icon for correct mail input -- */
+.icon__checkmark{
+  background-image: url(assets/svgs/icons/checkmark_green.svg);
+  position: relative;
+  height: 4.1vh;
+  width: 3vh;
+  bottom: 4.75vh;
+  left:-1.4vh;
+  display: none;
+}
+
+
+
+
+/* --- MEDIA QUERIES --- */
+
+/* Small, Medium & Large phones */
+@media screen and (max-width: 600px) /* and (max-height: 915px) */{
+  
+  body{
+      flex-direction: column;
+  }
+
+  .form__label{
+      font-size: 1.7vh;
+  }
+
+  .left, .form__alreadymember--top{
+      display: none;
+  }
+  
+  .container{
+      width: 100vw;
+  }
+
+  .content{
+      height: 90vh;
+      width: 85%; 
+  }
+
+  .form__inputField{
+      width: 99%;
+  }
+}
+
+/* --- Tablets --- */
+@media screen and (min-width: 600px){
+  
+  .content{
+      width: 80%;
+      height: 80vh;
+  }
+
+  .right{
+      width: 50%;
+  }
+
+  .form__alreadymember--bottom{
+      display: none;
+  }
+}
+
+/* --- Laptops, tabletop and bigger screens --- */
+@media screen and (min-width: 1280px){
+
+  .content{
+      width: 550px;
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distancify Challange</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,500;0,700;1,400&display=swap');</style>
+  </head>
+  
+
+  <body id="app">
+
+    <div class="container left">
+    </div>
+
+    <div class="container right">
+        <div class="content">
+
+            <h1 id="hd">Welcome!<br>Create your account.</h1>
+            <h2 class="form__alreadymember--top">Already a member? <u>Sign in</u></h2>
+
+            <form id="signup" class="content__form">
+
+                <!-- Phone call -->
+                <label for="phone" class="form__label">Phone nr</label>
+                <select name="country">
+                    <option value="Sweden">Sweden</option>
+                </select>
+                <input type="tel" placeholder="Your number" id="phone" class="form__inputField">
+
+                <!-- E-mail -->
+                <label class="form__label">E-mail</label>
+                <input type="text" placeholder="example: john.doe@gmail.com"class="form__inputField">
+
+                <!-- Password -->
+                <label class="form__label">Password</label>
+                <input type="password" placeholder="It'll be our secret..." class="form__inputField" v-model="password">
+                <button class="form__icon-btn" @click.prevent="toggleVisibility('password')"><i class="icon icon__closedeye" :class="{icon__openeye: passwordVisibility}"></i></button><i class="icon icon__checkmark"></i>
+                
+
+                <!-- Repeat Password -->
+                <label class="form__label">Repeat password</label>
+                <input type="password" placeholder="It'll be our secret..." class="form__inputField" v-model="repeatedPassword">
+                <button class="form__icon-btn" @click.prevent="toggleVisibility('repeatedPassword')"><i class="icon icon__closedeye" :class="{icon__openeye: repeatedPwVisibility}"></i></button></button><i class="icon icon__checkmark"></i>
+                
+                <!-- Radio buttons -->
+                <div class="form__wrapper">
+                    <label class="form__checkbox-label">
+                        <input type="checkbox" name="terms of service" value="terms of service" /><p>I consent to the <u> Privacy Policy </u> & <u> Terms of Service. </u></p>
+                    </label>
+                    <label class="form__checkbox-label">
+                        <input type="checkbox" name="newsletter" value="newsletter" /><p>I want to receive stories for trends, inspiration, interior design tips and to be the first to learn about new products & campaigns.</p>
+                    </label>
+                </div>
+
+                <div class="form__wrapper">
+                    <button class="form__signup-btn" id="signin_btn">Sign up</button>
+                    <p class="form__alreadymember--bottom">Already a member? <u>Sign in</u></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+    
+</html>
